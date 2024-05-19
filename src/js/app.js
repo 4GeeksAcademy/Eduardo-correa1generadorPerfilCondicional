@@ -69,11 +69,7 @@ window.onload = function() {
           : this.value == "false"
           ? false
           : this.value;
-      if (attribute === "socialMediaPosition") {
-        render(Object.assign(window.variables, values));
-      } else {
-        render(Object.assign(window.variables, values));
-      }
+      render(Object.assign(window.variables, values));
     });
   });
 };
