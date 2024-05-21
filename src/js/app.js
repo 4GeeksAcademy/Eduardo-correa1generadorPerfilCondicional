@@ -33,7 +33,10 @@ function render(variables = {}) {
             }" target="_blank"><i class="fab fa-github"></i></a></li>
             <li><a href="${
               variables.linkedin
-                ? `https://linkedin.com/${variables.linkedin.replace(/^@/, "")}`
+                ? `https://linkedin.com/in/${variables.linkedin.replace(
+                    /^@/,
+                    ""
+                  )}`
                 : "https://linkedin.com"
             }" target="_blank"><i class="fab fa-linkedin"></i></a></li>
             <li><a href="${
