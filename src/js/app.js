@@ -21,20 +21,29 @@ function render(variables = {}) {
     variables.country ? variables.country : "Country"
   }</h3>
           <ul class="${socialMediaPositionClass}">
+          <li><a href="${
+            variables.twitter
+              ? `https://x.com/${variables.twitter.replace(/^@/, "")}`
+              : "https://x.com/"
+          }" target="_blank"><i class="fab fa-twitter"></i></a></li>
             <li><a href="${
-              variables.twitter ? variables.twitter : "https://twitter.com"
-            }"><i class="fab fa-twitter"></i></a></li>
+              variables.github
+                ? `https://github.com/${variables.github.replace(/^@/, "")}`
+                : "https://github.com"
+            }" target="_blank"><i class="fab fa-github"></i></a></li>
             <li><a href="${
-              variables.github ? variables.github : "https://github.com"
-            }"><i class="fab fa-github"></i></a></li>
-            <li><a href="${
-              variables.linkedin ? variables.linkedin : "https://linkedin.com"
-            }"><i class="fab fa-linkedin"></i></a></li>
+              variables.linkedin
+                ? `https://linkedin.com/${variables.linkedin.replace(/^@/, "")}`
+                : "https://linkedin.com"
+            }" target="_blank"><i class="fab fa-linkedin"></i></a></li>
             <li><a href="${
               variables.instagram
-                ? variables.instagram
+                ? `https://instagram.com/${variables.instagram.replace(
+                    /^@/,
+                    ""
+                  )}`
                 : "https://instagram.com"
-            }"><i class="fab fa-instagram"></i></a></li>
+            }" target="_blank"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>`;
 }
